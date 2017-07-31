@@ -1,0 +1,1 @@
+Copier coller le contenu du fichier .SQL dans la commande de phpmyadmin, dans une base 'pendu'

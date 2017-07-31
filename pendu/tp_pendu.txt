@@ -1,0 +1,78 @@
+REGLES
+
+https://fr.wikipedia.org/wiki/Le_pendu_(jeu)
+
+(Dans cet exemple, votre programme jouera le rôle du joueur "JULIEN")
+
+... "prendre du recul c'est prendre de l'élan."
+
+##############################################################
+
+
+CONTRAINTE :
+
+LES MOTS NE DOIVENT JAMAIS ETRE DISPONIBLES COTE CLIENT => UTILISER PHP
+
+
+###########################################################################
+
+
+OPTION 1 : PARTIR DE ZERO :)
+OPTION 2 : UTILISER LES FICHIERS D'AIDE FOURNIS (PHP = OK // JS A COMPLETER + DEBOGUER )
+
+
+###########################################################################
+
+
+INDICATIONS
+
+0/ VOIR LA VIDEO D'EXEMPLE (VOUS ETES LIBRE D'ADAPTER OU D'AMELIORER L'EXEMPLE, DANS LA LIMITE DES REGLES DU PENDU)
+
+1/ CREER UNE BASE DE DONNEES PENDU
+
+2/ CREER UNE TABLE MOTS
+
+    id : (smallint PRIMARY AI)
+    mot : VARCHAR (24 utf8_general_ci)
+
+3/ PREPARER LE DOCUMENT HTML (une partie ajouter mot, un partie plateau de jeu)
+
+4/ LIER UN FICHER JS A UN FICHIER PHP VIA DES APPELS AJAX (XMLHttpRequest)
+5/ AU CLICK SUR "AJOUTER" INSERER EN BDD CHAQUE MOT SAISI, SI SA LONGUEUR EST SUPERIEURE OU EGALE A 4
+6/ AU CLICK SUR "JOUER" : SELECTIONNER ALEATOIREMENT UN MOT EN BASE, STOCKER LE MOT EN SESSION PHP ET COMMENCER LA PARTIE SELON LES REGLES FOURNIES 
+7/ AU CLICK SUR "VALIDER LETTRE" : UTILISER LA LETTRE SAISIE POUR TROUVER SES OCCURENCES DANS LE MOT STOCKE EN SESSION
+8/ UTILISER LA CONSOLE DU NAVIGATEUR (ONGLETS CONSOLE ET RESEAU !!!)
+9/ NE PAS OUBLIER CONSOLE.LOG() POUR TRACER L'EVOLUTION DES DONNEES
+
+10/ BON CODE !
+
+
+###########################################################################
+
+* DOCS JS UTILES
+
+https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener
+https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest
+https://developer.mozilla.org/fr/docs/Web/API/FormData
+
+* DOCS PHP UTILES
+
+http://php.net/manual/fr/pdo.construct.php
+http://php.net/manual/fr/pdostatement.fetch.php
+http://php.net/manual/fr/pdostatement.fetchcolumn.php
+http://php.net/manual/fr/session.examples.basic.php
+http://php.net/manual/fr/reserved.variables.session.php
+
+http://php.net/manual/fr/function.preg-split.php
+http://php.net/manual/fr/function.strpos.php
+http://php.net/manual/fr/function.array-push.php
+http://php.net/manual/fr/function.rand.php
+http://php.net/manual/fr/function.strlen.php
+
+* FONCTION MYSQL UTILE
+
+https://dev.mysql.com/doc/refman/5.1/en/mathematical-functions.html#function_rand
+
+* MISC 
+
+http://laurent.le-brun.eu/ascii/index.php/2007/10/10/16-pendu

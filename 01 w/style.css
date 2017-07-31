@@ -1,0 +1,193 @@
+*{margin : 0;
+    padding : 0;
+    box-sizing: border-box}
+
+header{
+    height: 10vh;
+    width: 100vw;
+    border-bottom: 1px solid silver;
+    padding-top: 1vh;
+}
+header>*/*cible les enfants directs*/{
+    float: left
+}
+
+body{
+    overflow-x: hidden
+}
+
+.logo{width: 9.5vw;
+    height: 8vh;
+    margin: 0 3vw;
+    background-image: url("logo.png");
+    background-size: cover;}
+
+nav ul li {
+    float: left;
+    margin-left: 1vw;
+    list-style: none;
+
+}
+
+nav ul li a {
+    margin-right: 1vw;
+
+}
+
+nav{
+    margin-top: 2vh;
+    float: right;
+    margin-right: 2vw
+}
+
+.search{
+    width: 40vw;
+    height: 9vh;
+}
+.search input[type=submit]{
+    background-color: white;
+    height: 50%;
+    margin-top: 2%;
+    width: 15%;
+}
+.search input[type=text]{
+    width: 80%;
+    height: 50%;
+    margin-top: 2%   
+}
+
+.fcom input[type=submit]{
+    background-color: white;
+    border: 1px solid black;
+}
+
+section.gauche{
+    float : left;
+    width: 60vw;
+    margin-right: 5vw;
+    height: 100vh;
+    padding: 3vw;
+    padding-top: 1vw;
+}
+h1{
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+}
+.fcom, iframe{
+    display: block;
+}
+
+iframe{
+    width: 50vw;
+    height: 50vh;
+    margin: 2vh 0 ;
+}
+
+section.droite{
+    padding-top: 10vh;
+}
+
+section.droite>*{
+    padding-top: 2vh;
+}
+section.droite hr{
+    padding: 0;
+}
+section.droite div img{
+    float : left;
+    height: 10vh;
+    width: 8vw;
+    margin-right: 1vw;
+}
+section.droite div{
+    padding : 1.5vh;
+}
+
+div.descr{
+    width:50vw;
+    height: 10vh;
+    margin: 2vh 0;
+}
+div.descr p{
+    height: 48%;
+    width: 100%;
+
+}
+
+div.descr div{
+    height: 50%;
+    width: 100%;
+    border: 1.5px solid black;
+    text-align: center;
+}
+div.descr div i{
+    padding: 1vh;
+}
+.comment hr, textarea{
+    margin: 1.5vh 0;  
+}
+
+.comment div span{
+    display: block;
+    margin-bottom: 1.5vh
+}
+.like{
+    border: 1px solid black;
+    width: 7.5vw;
+    height: 4vh;
+    /* padding: 0 0.5vw;*/
+    display: inline-block
+}
+
+.like button{
+    border: 0px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.fa-plus{
+    border: 1px solid black;
+}
+.fa-plus select{
+    border:0px;
+}
+input[value=Share], input[value=Embed]{
+    background-color: white;
+    border: 1px solid black;
+    height: 3.7vh;
+}
+.fa-flag{
+    background-color: white;
+    color:crimson;
+    border: 0px;
+}
+.fa-bar-chart{
+    background-color: white;
+    border: 1px solid black;
+}
+.vus{
+    font-size: 1.5rem;
+    margin-left: 15vw;
+    font-weight: bold;
+    
+}
+.sbar{
+    float: left;
+    margin-top: 2vh;
+}
+.ratio{
+    margin-left: 35vw;
+}
+.ratio>div{
+    height: 1.5vh;
+    width: 15vw;
+    background-color: crimson;
+}
+
+    
+.vert{
+    background-color: limegreen;
+    width: 79%;
+    height: 100%;
+}

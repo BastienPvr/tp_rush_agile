@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script>
+            window.onload = function(){
+                var input = document.querySelector("input");
+                var button = document.querySelector("button");
+                var ul = document.querySelector("ul");
+
+                var array = ['<li data-category="prenom">Jean-Jacque</li>', '<li data-category="objet">Guitare</li>', '<li data-category="objet">Livre</li>', '<li data-category="chiffre">52</li>', '<li data-category="prenom">Jean-Luc</li>', '<li data-category="chiffre">404</li>', '<li data-category="prenom">Jean-Nawal</li>', '<li data-category="chiffre">12</li>', '<li data-category="objet">Chaussure</li>'];
+
+                array.forEach(function(elem){
+                    ul.innerHTML += elem
+                });
+
+                button.onclick = function(){
+                    ul.innerHTML = "";
+                    if(input.value.length === 0){
+                        array.forEach(function(elem){
+                            ul.innerHTML += elem
+                        });
+                    }else{
+                        array.forEach(function(elem){
+                            if(elem.includes('data-category="'+input.value)){
+                                ul.innerHTML += elem; 
+                            }
+
+                        });
+                        input.value = "";
+
+                    }
+
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text">
+        <button> Filter</button>
+        <ul></ul>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <style>
+        li{border: 1px solid silver; width: 100%; height: 7.5%; list-style: none; text-align: center}
+        ul{float: left; width: 30vw; height: 60vh; margin-left: 13vw; padding: 0; border: 1px solid black}
+    </style>
+
+    <body>
+        <ul id="ul1" class="left"></ul>
+        <ul id="ul2" class="right">
+            <li id="li1" draggable="true">lorem</li>
+            <li id="li2" draggable="true">case</li>
+            <li id="li3" draggable="true">foo</li>
+            <li id="li4" draggable="true">var</li>
+            <li id="li5" draggable="true">fun</li>
+        </ul>
+        <script>
+            var start = (function start(){
+                var li = document.querySelectorAll('li');
+                var ul = document.querySelectorAll('ul');
+
+                li.forEach(function(elem){  
+                    elem.ondragstart = function dragstart_handler(ev) {
+                        ev.dataTransfer.setData("text", ev.target.id);
+                        ev.dataTransfer.effectAllowed = "move";
+                    }
+                })
+
+                ul.forEach(function(elem){
+                    elem.ondragover = function dragover_handler(ev) {
+                        ev.preventDefault();
+                        ev.dataTransfer.dropEffect = "move"
+                    }
+                    
+                    elem.ondrop = function drop_handler(ev) {
+                        ev.preventDefault();
+                        var data = ev.dataTransfer.getData("text");
+                        ev.target.appendChild(document.querySelector("#"+data));
+                    }
+                })
+            }())
+        </script>
+    </body>
+</html>

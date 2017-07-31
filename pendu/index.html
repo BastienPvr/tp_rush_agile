@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Le pendu</title>
+        <style>
+            .ajout{
+                float: left;
+                width: 30vw;
+                height: 100vh;
+                border-right: 2px solid silver;
+                margin-right: 2vw
+            }
+
+            .game{
+                float: right;
+                width: 60vw
+            }
+
+            pre{
+                width: 15vw;
+                height: 10vw;
+                background-color: black;
+                color: lime
+            }
+
+            .clavier{
+                width: 100%;
+                text-align: center;
+                float: left;
+                margin-top: 5vh
+            }
+
+            .clavier button{
+                width: 40px;
+            }
+            
+            .mot{
+                display: block;
+                margin: 20vh 0;
+                width: 100%
+            }
+            
+            .hint{
+                border-bottom: 2px solid black;
+                margin-left: 10px;
+                width: 5vw;
+                float: left;
+                text-align: center;
+                font-size: 5vh;
+                height: 6vh
+            }
+            
+            .displayit{
+                display: none
+            }
+        </style>
+        <script src="jquery-3.2.1.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <section class="ajout">
+            <input type="text" placeholder="nouveau mot" name="mot">
+            <button>Ajouter</button>
+        </section>
+        <section class="game">
+            <button class="begin">Commencer le jeu</button>
+            <pre class="displayit">
+   ,==========Y===
+   ||  /      |
+   || /       |
+   ||/        <span class="displayit">O</span>
+   ||        <span class="displayit">/</span><span class="displayit">|</span><span class="displayit">\</span>
+   ||        <span class="displayit">/</span> <span class="displayit">\</span>
+   ||       <span class="displayit">&ang;</span>  <span class="displayit">&ang;</span>
+  /||
+ //||
+============______________
+</pre>
+            <div class="mot"></div>
+            <div class="clavier displayit">
+                <button class="a">A</button>
+                <button class="z">Z</button>
+                <button class="e">E</button>
+                <button class="r">R</button>
+                <button class="t">T</button>
+                <button class="y">Y</button>
+                <button class="u">U</button>
+                <button class="i">I</button>
+                <button class="o">O</button>
+                <button class="p">P</button><br>
+                <button class="q">Q</button>
+                <button class="s">S</button>
+                <button class="d">D</button>
+                <button class="f">F</button>
+                <button class="g">G</button>
+                <button class="h">H</button>
+                <button class="j">J</button>
+                <button class="k">K</button>
+                <button class="l">L</button>
+                <button class="m">M</button><br>
+                <button class="w">W</button>
+                <button class="x">X</button>
+                <button class="c">C</button>
+                <button class="v">V</button>
+                <button class="b">B</button>
+                <button class="n">N</button>
+            </div>
+        </section>
+    </body>
+</html>
